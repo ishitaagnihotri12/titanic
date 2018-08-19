@@ -14,6 +14,7 @@ prop.table(table(train$Sex, train$Survived), 1)
 
 # Create new column in test set with our prediction that everyone dies
 test$Survived <- 0
+summary(train$Sex)
 # Update the prediction to say that all females will survive
 test$Survived[test$Sex == 'female'] <- 1
 
